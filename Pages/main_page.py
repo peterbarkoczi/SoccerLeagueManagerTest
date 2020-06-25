@@ -17,6 +17,10 @@ class MainPage(BasePage):
     def go_to_main_page(self):
         self.driver.get(self.base_url)
 
+    def go_to_league_page(self):
+        self.go_to_main_page()
+        self.click_on_league()
+
     def get_app_title(self):
         self.wait.until(EC.visibility_of_element_located(self.page_title))
         return self.driver.find_element(*self.page_title).text
