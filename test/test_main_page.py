@@ -1,5 +1,4 @@
-import unittest
-from Tests.base_test import BaseTest
+from test.test_base import BaseTest
 
 
 class MainPageTest(BaseTest):
@@ -25,7 +24,3 @@ class MainPageTest(BaseTest):
         self.main_page.go_to_main_page()
         self.main_page.click_on_league()
         self.assertTrue(self.league_page.menu_is_appeared())
-
-
-if __name__ == "__main__":
-    unittest.main()
